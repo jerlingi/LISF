@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.22">
+<meta name="generator" content="Asciidoctor 2.0.26">
 <title>Land Information System (LIS): LIS 7.5 Users Guide</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -116,7 +116,6 @@ h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title str
 :not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
 pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
-pre>code{display:block}
 pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
 em em{font-style:normal}
 strong strong{font-weight:400}
@@ -219,6 +218,7 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
 .literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
 .listingblock>.content{position:relative}
+.listingblock pre>code{display:block}
 .listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
 .listingblock:hover code[data-lang]::before{display:block}
 .listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
@@ -438,8 +438,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>Land Information System (LIS): LIS 7.5 Users Guide</h1>
 <div class="details">
-<span id="revnumber">version 3.0,</span>
-<span id="revdate">11 Jan 2024</span>
+<span id="revnumber">version 5.0,</span>
+<span id="revdate">16 Jan 2026</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -558,6 +558,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LISF 557WW 7.7.0 release</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jan 16, 2025</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LISF 557WW 7.6.1 release</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nov 21, 2025</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LISF Public 7.5.3 release</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apr 29, 2025</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LISF 557WW 7.6.0 release</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nov 12, 2024</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LISF 557WW 7.5.15 release</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jun 14, 2024</p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LISF Public 7.5.0 release</p></td>
@@ -2231,13 +2256,13 @@ included components</p>
 <li>
 <p><em>GLASS_Albedo</em></p>
 <div class="paragraph">
-<p><span class="red">specifies what?</span></p>
+<p>GLASS Albedo retrievals</p>
 </div>
 </li>
 <li>
 <p><em>GLASS_LAI</em></p>
 <div class="paragraph">
-<p><span class="red">specifies what?</span></p>
+<p>GLASS LAI retrievals</p>
 </div>
 </li>
 <li>
@@ -4280,7 +4305,11 @@ Not all the optional components listed below are available in the public release
 <td class="tableblock halign-left valign-top"><p class="tableblock">On</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NLDAS2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NLDAS2 grib</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">On</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NLDAS2 netcdf</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">On</p></td>
 </tr>
 <tr>
@@ -5741,6 +5770,10 @@ Acceptable values are:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CABLE version 1.4b</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AquaCrop.7.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AquaCrop version 7.2</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FASST</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FASST</p></td>
 </tr>
@@ -6054,8 +6087,12 @@ Acceptable values for the sources are:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Princeton</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;NLDAS2&#8221;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NLDAS2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;NLDAS2 grib&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NLDAS-2 GRIB-1 format</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;NLDAS2 netcdf&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NLDAS-2 v020 netCDF-4 format</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;GLDAS&#8221;</p></td>
@@ -7319,6 +7356,10 @@ Acceptable values are:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">use the HyMAP2 router</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;HYMAP3 router&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use the HyMAP3 router</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;RAPID router&#8221;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">use the RAPID router</p></td>
 </tr>
@@ -7698,6 +7739,10 @@ Acceptable values are:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">USAF Snow and Ice Analysis</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;SNIP&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USAF SNow and Ice Product</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;SMAP(NASA) vegetation optical depth&#8221;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NASA L-band vegetation optical depth</p></td>
 </tr>
@@ -7716,6 +7761,18 @@ Acceptable values are:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;SNODAS&#8221;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SNODAS snow depth</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;GLASS LAI&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GLASS Leaf Area Index (LAI)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;GLASS Albedo&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GLASS Albedo (black-sky and white-sky)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;SWOT water level&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SWOT water surface elevation</p></td>
 </tr>
 </tbody>
 </table>
@@ -8852,7 +8909,26 @@ USAFSI netcdf filename prefix:         usafsi</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_ansasweda">9.5.15. ANSA SWE Assimilation</h4>
+<h4 id="sssec_snipda">9.5.15. SNIP Assimilation</h4>
+<div class="paragraph">
+<p><code>SNIP data directory:</code> specifies the directory for the
+SNIP data.</p>
+</div>
+<div class="paragraph">
+<p><code>SNIP netcdf filename prefix:</code> specifies the prefix of
+the SNIP dataset. If prefix is &#8220;SNIP&#8221;, then the file name will
+be &#8220;SNIP_yyyymmddhh.nc.&#8221;</p>
+</div>
+<div class="literalblock">
+<div class="title">Example <em>lis.config</em> entry</div>
+<div class="content">
+<pre>SNIP data directory:                  ./FORCING/SNIP
+SNIP netcdf filename prefix:         SNIP</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sssec_ansasweda">9.5.16. ANSA SWE Assimilation</h4>
 <div class="paragraph">
 <p><code>ANSA SWE data directory:</code> specifies the directory for the
 ANSA SWE data.</p>
@@ -8895,7 +8971,7 @@ ANSA SWE resolution (dy):                  0.25</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_ansascfda">9.5.16. ANSA Snow Covered Fraction (SCF) Assimilation</h4>
+<h4 id="sssec_ansascfda">9.5.17. ANSA Snow Covered Fraction (SCF) Assimilation</h4>
 <div class="paragraph">
 <p><code>ANSA SCF data directory:</code> specifies the directory for the
 ANSA SCA data.</p>
@@ -9041,7 +9117,7 @@ ANSA SCF threshold of observed SCF for non-full snow cover: 0.7</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_ansasnowdepthda">9.5.17. ANSA snow depth Assimilation</h4>
+<h4 id="sssec_ansasnowdepthda">9.5.18. ANSA snow depth Assimilation</h4>
 <div class="paragraph">
 <p><code>ANSA snow depth data directory:</code> specifies the directory for the
 ANSA snow depth data.</p>
@@ -9153,7 +9229,7 @@ ANSA snow depth MOD10C1 data directory:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_smmrsnowdepthda">9.5.18. SMMR snow depth Assimilation</h4>
+<h4 id="sssec_smmrsnowdepthda">9.5.19. SMMR snow depth Assimilation</h4>
 <div class="paragraph">
 <p><code>SMMR snow depth data directory:</code> specifies the directory for the
 SMMR snow depth data.</p>
@@ -9166,7 +9242,7 @@ SMMR snow depth data.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_ssmisnowdepthda">9.5.19. SSMI snow depth Assimilation</h4>
+<h4 id="sssec_ssmisnowdepthda">9.5.20. SSMI snow depth Assimilation</h4>
 <div class="paragraph">
 <p><code>SSMI snow depth data directory:</code> specifies the directory for the
 SSMI snow depth data.</p>
@@ -9245,7 +9321,7 @@ SSMI snow depth MOD10C1 data directory:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_amsresweda">9.5.20. AMSR-E SWE Assimilation</h4>
+<h4 id="sssec_amsresweda">9.5.21. AMSR-E SWE Assimilation</h4>
 <div class="paragraph">
 <p><code>AMSR-E SWE data directory:</code> specifies the directory for the
 SSMI snow depth data.</p>
@@ -9258,7 +9334,7 @@ SSMI snow depth data.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_modisscfda">9.5.21. MODIS snow cover fraction assimilation</h4>
+<h4 id="sssec_modisscfda">9.5.22. MODIS snow cover fraction assimilation</h4>
 <div class="paragraph">
 <p><code>MODIS SCF data directory:</code> specifies the directory for
 the MODIS snow cover fraction data.</p>
@@ -9286,7 +9362,7 @@ MODIS SCF cloud persistence threshold: 3</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_pmwsnowdepthda">9.5.22. PMW snow depth or SWE assimilation</h4>
+<h4 id="sssec_pmwsnowdepthda">9.5.23. PMW snow depth or SWE assimilation</h4>
 <div class="paragraph">
 <p><code>PMW snow data directory:</code> specifies the directory for the
 PMW SWE or snow depth data.</p>
@@ -9524,7 +9600,7 @@ PMW (HDF-EOS) SL snow data flag SDS name:    "Flags_SouthernDaily"</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_gracetwsda">9.5.23. GRACE TWS Assimilation</h4>
+<h4 id="sssec_gracetwsda">9.5.24. GRACE TWS Assimilation</h4>
 <div class="paragraph">
 <p><code>GRACE data directory:</code> specifies the directory for the
 GRACE TWS data (processed data from LDT).</p>
@@ -9566,7 +9642,7 @@ GRACE use reported measurement error values:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_smops_ascat_smda">9.5.24. SMOPS ASCAT soil moisture assimilation</h4>
+<h4 id="sssec_smops_ascat_smda">9.5.25. SMOPS ASCAT soil moisture assimilation</h4>
 <div class="paragraph">
 <p><code>SMOPS ASCAT soil moisture data directory:</code> specifies the directory
 for the SMOPS ASCAT soil moisture data.</p>
@@ -9790,7 +9866,7 @@ SMOPS ASCAT version: 'date-based'</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_smosl2smda">9.5.25. SMOS L2 soil moisture assimilation</h4>
+<h4 id="sssec_smosl2smda">9.5.26. SMOS L2 soil moisture assimilation</h4>
 <div class="paragraph">
 <p><code>SMOS L2 soil moisture data directory:</code> specifies the directory
 for the SMOS LS soil moisture data.</p>
@@ -9852,7 +9928,7 @@ SMOS L2 soil moisture number of bins in the CDF:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_ascattuwsmda">9.5.26. ASCAT (TU Wein) soil moisture assimilation</h4>
+<h4 id="sssec_ascattuwsmda">9.5.27. ASCAT (TU Wein) soil moisture assimilation</h4>
 <div class="paragraph">
 <p><code>ASCAT (TUW) soil moisture data directory:</code> specifies the directory
 for the ASCAT (TUW) soil moisture data.</p>
@@ -9887,7 +9963,7 @@ ASCAT (TUW) soil moisture number of bins in the CDF: 100</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_mcd15a2hlaida">9.5.27. MODIS MCD15A2H LAI assimilation</h4>
+<h4 id="sssec_mcd15a2hlaida">9.5.28. MODIS MCD15A2H LAI assimilation</h4>
 <div class="paragraph">
 <p><code>MCD15A2H LAI data directory:</code> specifies the location of the data directory containing the MODIS MCD15A2H LAI retrievals.</p>
 </div>
@@ -9915,7 +9991,93 @@ MCD15A2H LAI apply QC flags:                                  1</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_simgraceda">9.5.28. Simulated GRACE</h4>
+<h4 id="sssec_glasslaida">9.5.29. GLASS LAI assimilation</h4>
+<div class="paragraph">
+<p><code>GLASS LAI data directory:</code> specifies the location of the data directory containing the GLASS LAI retrievals.</p>
+</div>
+<div class="paragraph">
+<p><code>GLASS LAI data source:</code> specifies if the GLASS data source is AVHRR or MODIS.</p>
+</div>
+<div class="paragraph">
+<p><code>GLASS LAI apply temporal smoother between 8-day intervals:</code> specifies whether to apply temporal smoother between 8-day intervals of the LAI product.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not apply temporal smoother</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apply temporal smoother</p></td>
+</tr>
+</tbody>
+</table>
+<div class="literalblock">
+<div class="title">Example <em>lis.config</em> entry</div>
+<div class="content">
+<pre>GLASS LAI data directory:                                  ./GLASS/LAI
+GLASS LAI data source:                                     "AVHRR"
+GLASS LAI apply temporal smoother between 8-day intervals: 1</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sssec_glassalbedoda">9.5.30. GLASS Albedo assimilation</h4>
+<div class="paragraph">
+<p><code>GLASS Albedo data directory:</code> specifies the location of the data directory containing the GLASS Albedo retrievals.</p>
+</div>
+<div class="paragraph">
+<p><code>GLASS Albedo data source:</code> specifies if the GLASS data source is AVHRR or MODIS.</p>
+</div>
+<div class="paragraph">
+<p><code>GLASS Albedo apply QC flags:</code> specifies whether to apply quality-control flags of the GLASS Albedo data to the assimilation.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not apply QC flags</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apply QC flags</p></td>
+</tr>
+</tbody>
+</table>
+<div class="literalblock">
+<div class="title">Example <em>lis.config</em> entry</div>
+<div class="content">
+<pre>GLASS Albedo data directory:                               ./GLASS/Albedo
+GLASS Albedo data source:                                  "AVHRR"
+GLASS Albedo apply QC flags:                               1</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sssec_simgraceda">9.5.31. Simulated GRACE</h4>
 <div class="paragraph">
 <p><code>Simulated GRACE data directory:</code> specifies the location
 of the simulated GRACE data.</p>
@@ -9988,7 +10150,7 @@ Simulated GRACE use reported measurement error values:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_synsfda">9.5.29. Synthetic Streamflow</h4>
+<h4 id="sssec_synsfda">9.5.32. Synthetic Streamflow</h4>
 <div class="paragraph">
 <p><code>Synthetic streamflow data directory:</code> specifies the location
 of the synthetic streamflow data.</p>
@@ -10001,7 +10163,7 @@ of the synthetic streamflow data.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_esaccismda">9.5.30. ESA CCI soil moisture data assimilation</h4>
+<h4 id="sssec_esaccismda">9.5.33. ESA CCI soil moisture data assimilation</h4>
 <div class="paragraph">
 <p><code>ESA CCI soil moisture data directory:</code> specifies the location
 of the ESA CCI soil moisture data.</p>
@@ -10069,7 +10231,7 @@ ESA CCI soil moisture number of bins in the CDF:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_amsr2gcomwsmda">9.5.31. AMSR2 (GCOMW) soil moisture data assimilation</h4>
+<h4 id="sssec_amsr2gcomwsmda">9.5.34. AMSR2 (GCOMW) soil moisture data assimilation</h4>
 <div class="paragraph">
 <p><code>AMSR2(GCOMW) soil moisture data directory:</code> specifies the AMSR2(GCOMW) soil
 moisture data directory.</p>
@@ -10131,7 +10293,7 @@ AMSR2(GCOMW) soil moisture number of bins in the CDF:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_amsr2gcomwsndda">9.5.32. AMSR2 (GCOMW) snow depth data assimilation</h4>
+<h4 id="sssec_amsr2gcomwsndda">9.5.35. AMSR2 (GCOMW) snow depth data assimilation</h4>
 <div class="paragraph">
 <p><code>AMSR2(GCOMW) snow depth data directory:</code>
 specifies the directory for the AMSR2(GCOMW) snow depth data.</p>
@@ -10270,7 +10432,7 @@ AMSR2(GCOMW) snow depth input mask file:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_smapnasasmda">9.5.33. SMAP (NASA) soil moisture assimilation</h4>
+<h4 id="sssec_smapnasasmda">9.5.36. SMAP (NASA) soil moisture assimilation</h4>
 <div class="paragraph">
 <p><code>SMAP(NASA) soil moisture data directory:</code> specifies the SMAP(NASA) soil
 moisture data directory.</p>
@@ -10383,7 +10545,7 @@ SMAP(NASA) CDF read option:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_smapnrtsmda">9.5.34. SMAP (NRT) soil moisture assimilation</h4>
+<h4 id="sssec_smapnrtsmda">9.5.37. SMAP (NRT) soil moisture assimilation</h4>
 <div class="paragraph">
 <p><code>SMAP(NRT) soil moisture data directory:</code> specifies the SMAP(NRT) soil
 moisture data directory</p>
@@ -10459,7 +10621,7 @@ SMAP(NRT) CDF read option:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_cdftransfersmda">9.5.35. Transfering stratified CDFs from one domain to another</h4>
+<h4 id="sssec_cdftransfersmda">9.5.38. Transfering stratified CDFs from one domain to another</h4>
 <div class="paragraph">
 <p><code>Use CDF transfer for soil moisture data assimilation:</code> specifies
 whether to use CDF transfer method.</p>
@@ -10468,7 +10630,7 @@ whether to use CDF transfer method.</p>
 <p><code>Reference domain model CDF file:</code> specifies the reference domain model CDF name and data directory.</p>
 </div>
 <div class="paragraph">
-<p><code>Reference domain obs CDF file:</code> specifies the reference domain obs CDF name and data directory.</p>
+<p><code>Target domain obs CDF file:</code> specifies the reference domain obs CDF name and data directory.</p>
 </div>
 <div class="paragraph">
 <p><code>Number of bins in the soil moisture CDF:</code> specifies the number of bins in the CDF.</p>
@@ -10492,7 +10654,7 @@ Target domain precipitation climatology data source: Precip.climo.eu.merra/LVT_M
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_smapnasavodda">9.5.36. SMAP (NASA) vegetation optical depth assimilation</h4>
+<h4 id="sssec_smapnasavodda">9.5.39. SMAP (NASA) vegetation optical depth assimilation</h4>
 <div class="paragraph">
 <p><code>SMAP(NASA) vegetation optical depth data directory:</code> specifies the SMAP(NASA) vegetation
 optical depth data directory</p>
@@ -10561,7 +10723,7 @@ SMAP(NASA) vegetation optical depth number of bins in the CDF:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_smosnesdissmda">9.5.37. SMOS (NESDIS) soil moisture assimilation</h4>
+<h4 id="sssec_smosnesdissmda">9.5.40. SMOS (NESDIS) soil moisture assimilation</h4>
 <div class="paragraph">
 <p><code>SMOS(NESDIS) soil moisture data directory:</code> specifies the SMOS(NESDIS) soil
 moisture data directory</p>
@@ -10595,7 +10757,7 @@ SMOS(NESDIS) soil moisture number of bins in the CDF:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_smosnrtnnsmda">9.5.38. SMOS NRT NN soil moisture assimilation</h4>
+<h4 id="sssec_smosnrtnnsmda">9.5.41. SMOS NRT NN soil moisture assimilation</h4>
 <div class="paragraph">
 <p><code>SMOS NRT NN soil moisture data directory:</code> specifies the SMOS NRT NN soil
 moisture data directory</p>
@@ -10671,7 +10833,7 @@ SMOS NRT NN CDF read option:       1</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_thysmda">9.5.39. THySM soil moisture assimilation</h4>
+<h4 id="sssec_thysmda">9.5.42. THySM soil moisture assimilation</h4>
 <div class="paragraph">
 <p><code>THySM data directory:</code> specifies the THySM data directory.</p>
 </div>
@@ -10699,7 +10861,7 @@ THySM soil moisture number of bins in the CDF: 100</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_snodasda">9.5.40. SNODAS snow depth assimilation</h4>
+<h4 id="sssec_snodasda">9.5.43. SNODAS snow depth assimilation</h4>
 <div class="paragraph">
 <p><code>SNODAS data directory:</code> specifies the directory for the
 SNODAS data.</p>
@@ -10708,6 +10870,26 @@ SNODAS data.</p>
 <div class="title">Example <em>lis.config</em> entry</div>
 <div class="content">
 <pre>SNODAS snow depth data directory:                  ./FORCING/SNODAS</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sssec_swotwlda">9.5.44. SWOT water level assimilation</h4>
+<div class="paragraph">
+<p><code>SWOT water level data directory:</code> specifies the SWOT water level data directory.</p>
+</div>
+<div class="paragraph">
+<p><code>SWOT water level map:</code> specifies the assimilation map file and its associated sequential ID.</p>
+</div>
+<div class="paragraph">
+<p><code>Data assimilation frequency::</code> specifies the DA frequency: minimum 15mn and maximum 1da.</p>
+</div>
+<div class="literalblock">
+<div class="title">Example <em>lis.config</em> entry</div>
+<div class="content">
+<pre>SWOT water level data directory:             ./input/SWOT_obs
+SWOT water level map:                        ./SWOT_lis_id.nc
+Data assimilation frequency                  "15mn"</pre>
 </div>
 </div>
 </div>
@@ -13643,7 +13825,7 @@ x direction which is useful for when precip and native grid differ.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(3600)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(1/10 degree latlon reserved for future use — note
-          this isn&#8217;t grid centered)</p></td>
+          this is not grid centered)</p></td>
 </tr>
 </tbody>
 </table>
@@ -13678,7 +13860,7 @@ y direction which is useful for when precip and native grid differ.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(1801)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(1/10 degree latlon reserved for future use — note
-          this isn&#8217;t grid centered)</p></td>
+          this is not grid centered)</p></td>
 </tr>
 </tbody>
 </table>
@@ -13901,7 +14083,7 @@ Acceptable values are:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">use the estimate, do not use the rank —
          assumes that rank of GEOPRECIP is 1;
-         i.e., uses it when it&#8217;s available</p></td>
+         i.e., uses it when it is available</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
@@ -14191,7 +14373,7 @@ match the first guess source.</p>
 </div>
 <div class="paragraph">
 <p><code>AGRMET radiation derived from:</code> specifies how to compute
-shortwave and longwave radiation.  Defaults to &#8220;cloud types&#8221;.
+shortwave and longwave radiation.
 Acceptable values are:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -14211,11 +14393,637 @@ Acceptable values are:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">use cloud types</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;cloud optical depth&#8221;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">use cloud optical depth</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;cod properties&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use cloud optical depth properties</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;GALWEM_RAD&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use radiation fields from GALWEM</p></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><code>AGRMET GALWEM radiation data directory:</code> specifies the location of the GALWEM
+radiation data files.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET number of gauge networks to use:</code> specifies nonnegative number
+of gauge networks to use, to be identified in separate config entry.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET gauge networks to use::</code> specifies list of names of gauge
+networks to be used. (One line of names per domain.)</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM Precip correlation function type:</code> specifies function for modeling precipitation error correlations.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use Gaussian function</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use inverse exponential function</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET GALWEM T2M correlation function type:</code> specifies function for modeling 2m temperature error correlations.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use Gaussian function</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use inverse exponential function</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET GALWEM RH2M correlation function type:</code> specifies function for modeling 2m relative humidity error correlations.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use Gaussian function</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use inverse exponential function</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET GALWEM SPD10M correlation function type:</code> specifies function for modeling 10m wind speed error correlations.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use Gaussian function</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use inverse exponential function</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET GFS Precip correlation function type:</code> specifies function for modeling precipitation error correlations.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use Gaussian function</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use inverse exponential function</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET GFS T2M correlation function type:</code> specifies function for modeling 2m temperature error correlations.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use Gaussian function</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use inverse exponential function</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET GFS RH2M correlation function type:</code> specifies function for modeling 2m relative humidity error correlations.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use Gaussian function</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use inverse exponential function</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET GFS SPD10M correlation function type:</code> specifies function for modeling 10m wind speed error correlations.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use Gaussian function</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use inverse exponential function</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET precip obs file format:</code> specifies preobs file format.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use legacy files</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use WIGOS supported files</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET sfc obs file format:</code> specifies sfcobs file format.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use legacy files</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use WIGOS supported files</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET GALWEM Precip background error scale length (m):</code> specifies scale length for GALWEM precipitation error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM Precip background error variance:</code> specifies GALWEM precipitation error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM Precip Gauge observation error variance:</code> specifies rain gauge observation precipitation error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM Precip GEOPRECIP observation error scale length (m):</code> specifies scale length for GEOPRECIP precipitation error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM Precip GEOPRECIP observation error variance:</code> specifies GEOPRECIP observation precipitation error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM Precip SSMI observation error scale length (m):</code> specifies scale length for SSMI precipitation error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM Precip SSMI observation error variance:</code> specifies SSMI observation precipitation error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM Precip CMORPH observation error scale length (m):</code> specifies scale length for CMORPH precipitation error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM Precip CMORPH observation error variance:</code> specifies CMORPH observation precipitation error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM Precip IMERG observation error scale length (m):</code> specifies scale length for IMERG precipitation error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM Precip IMERG observation error variance:</code> specifies IMERG observation precipitation error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM T2M background error scale length (m):</code> specifies scale length for GALWEM 2m temperature error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM T2M background error variance:</code> specifies GALWEM 2m temperature error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM T2M station observation error variance:</code> specifies station observation 2m temperature error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM RH2M background error scale length (m):</code> specifies scale length for GALWEM 2m relative humidity error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM RH2M background error variance:</code> specifies GALWEM 2m relative humidity error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM RH2M station observation error variance:</code> specifies station observation 2m relative humidity error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM SPD10M background error scale length (m):</code> specifies scale length for GALWEM 10m wind speed error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM SPD10M background error variance:</code> specifies GALWEM 10m wind speed error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GALWEM SPD10M station observation error variance:</code> specifies station observation 10 wind speed error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS Precip background error scale length (m):</code> specifies scale length for GFS precipitation error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS Precip background error variance:</code> specifies GFS precipitation error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS Precip Gauge observation error variance:</code> specifies rain gauge observation precipitation error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS Precip GEOPRECIP observation error scale length (m):</code> specifies scale length for GEOPRECIP precipitation error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS Precip GEOPRECIP observation error variance:</code> specifies GEOPRECIP observation precipitation error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS Precip SSMI observation error scale length (m):</code> specifies scale length for SSMI precipitation error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS Precip SSMI observation error variance:</code> specifies SSMI observation precipitation error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS Precip CMORPH observation error scale length (m):</code> specifies scale length for CMORPH precipitation error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS Precip CMORPH observation error variance:</code> specifies CMORPH observation precipitation error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS Precip IMERG observation error scale length (m):</code> specifies scale length for IMERG precipitation error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS Precip IMERG observation error variance:</code> specifies IMERG observation precipitation error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS T2M background error scale length (m):</code> specifies scale length for GFS 2m temperature error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS T2M background error variance:</code> specifies GFS 2m temperature error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS T2M station observation error variance:</code> specifies station observation 2m temperature error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS RH2M background error scale length (m):</code> specifies scale length for GFS 2m relative humidity error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS RH2M background error variance:</code> specifies GFS 2m relative humidity error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS RH2M station observation error variance:</code> specifies station observation 2m relative humidity error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS SPD10M background error scale length (m):</code> specifies scale length for GFS 10m wind speed error correlation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS SPD10M background error variance:</code> specifies GFS 10m wind speed error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET GFS SPD10M station observation error variance:</code> specifies station observation 10 wind speed error variance.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET forcing map projection:</code> specifies map projection type.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">latlon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use latitude/longitude projection</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET forcing domain lower left lat:</code> specifies southwest latitude corner.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET forcing domain lower left lon:</code> specifies southwest longitude corner.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET forcing domain upper right lat:</code> specifies northeast latitude corner.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET forcing domain upper right lon:</code> specifies northeast longitude corner.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET forcing domain resolution (dx):</code> specifies east-west grid resolution in degrees longitude.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET forcing domain resolution (dy):</code> specifies north-south grid resolution in degrees latitude.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET use IMERG data:</code> specifies whether to use 30-min IMERG data
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not assimilate IMERG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assimilate IMERG</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET IMERG temperature threshold:</code> temperature threshold (K) below which to reject IMERG retrievals.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET IMERG data directory:</code> top directory to find IMERG files.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET IMERG product:</code> identifies which IMERG run to assimilate.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B-HHR-E</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-min Early Run</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B-HHR-L</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-min Late Run</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B-HHR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-min Final Run</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET IMERG version:</code> text string identifying IMERG version to assimilate.  Used to construct file names.  V06x and V07x are supported.
+Acceptable values include:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V06B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version 06B</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V06C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version 06C</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V06D</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version 06D</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V07B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version 07B</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET IMERG Probability Liquid Precip Threshold:</code> threshold to reject IMERG if liquid precip likelihood is too low.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET output OBA data:</code> option for writing OBA (observation, background, analysis) files from Bratseth.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not write OBA files</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Write OBA files</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Write OBA files w/o actually running Bratseth scheme</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET skip backQC:</code> option to disable backQC step.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not skip backQC step</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skip backQC step</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET skip superstatQC:</code> option to disable superstatQC step.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not skip superstatQC step</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skip superstatQC step</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>AGRMET 3hr maximum precip ceiling:</code> set threshold (mm) above which to reject precipitation.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET mask file:</code> path to legacy AGRMET landmask file.</p>
+</div>
+<div class="paragraph">
+<p><code>AGRMET terrain file:</code> path to legacy AGRMET terrain file.</p>
+</div>
 <div class="literalblock">
 <div class="title">Example <em>lis.config</em> entry</div>
 <div class="content">
@@ -14288,7 +15096,88 @@ AGRMET CMORPH dx:
 AGRMET CMORPH dy:
 AGRMET use GFS precip:     1
 AGRMET use GALWEM precip:  0
-AGRMET radiation derived from: 'cloud types'</pre>
+AGRMET radiation derived from: GALWEM_RAD
+AGRMET GALWEM radiation data directory: GALWEM_Rad
+AGRMET number of gauge networks to use: 7
+AGRMET gauge networks to use::
+AMIL CANA FAA ICAO WMO HADS NWSLI
+::
+AGRMET GALWEM Precip correlation function type: 1
+AGRMET GALWEM T2M correlation function type: 1
+AGRMET GALWEM RH2M correlation function type: 1
+AGRMET GALWEM SPD10M correlation function type: 1
+AGRMET GFS Precip correlation function type: 1
+AGRMET GFS T2M correlation function type: 1
+AGRMET GFS RH2M correlation function type: 1
+AGRMET GFS SPD10M correlation function type: 1
+AGRMET precip obs file format: 1
+AGRMET sfc obs file format: 1
+
+AGRMET GALWEM Precip background error scale length (m):         102000.
+AGRMET GALWEM Precip background error variance:                      0.83
+AGRMET GALWEM Precip Gauge observation error variance:               0.86
+AGRMET GALWEM Precip GEOPRECIP observation error scale length (m): 132000.
+AGRMET GALWEM Precip GEOPRECIP observation error variance:           1.24
+AGRMET GALWEM Precip SSMI observation error scale length (m):   133000.
+AGRMET GALWEM Precip SSMI observation error variance:                2.58
+AGRMET GALWEM Precip CMORPH observation error scale length (m):  89000.
+AGRMET GALWEM Precip CMORPH observation error variance:              1.15
+AGRMET GALWEM Precip IMERG observation error scale length (m):  101000.
+AGRMET GALWEM Precip IMERG observation error variance:               1.93
+AGRMET GALWEM T2M background error scale length (m):            110000.
+AGRMET GALWEM T2M background error variance:                         1.48
+AGRMET GALWEM T2M station observation error variance:                2.30
+AGRMET GALWEM RH2M background error scale length (m):           119000.
+AGRMET GALWEM RH2M background error variance:                       30.7
+AGRMET GALWEM RH2M station observation error variance:              65.8
+AGRMET GALWEM SPD10M background error scale length (m):          53000.
+AGRMET GALWEM SPD10M background error variance:                      0.62
+AGRMET GALWEM SPD10M station observation error variance:             2.37
+
+AGRMET GFS Precip background error scale length (m):             93000.
+AGRMET GFS Precip background error variance:                         0.47
+AGRMET GFS Precip Gauge observation error variance:                  0.70
+AGRMET GFS Precip GEOPRECIP observation error scale length (m): 131000.
+AGRMET GFS Precip GEOPRECIP observation error variance:              1.06
+AGRMET GFS Precip SSMI observation error scale length (m):      131000.
+AGRMET GFS Precip SSMI observation error variance:                   2.10
+AGRMET GFS Precip CMORPH observation error scale length (m):     91000.
+AGRMET GFS Precip CMORPH observation error variance:                 0.92
+AGRMET GFS Precip IMERG observation error scale length (m):     100000.
+AGRMET GFS Precip IMERG observation error variance:                  1.62
+AGRMET GFS T2M background error scale length (m):               125000.
+AGRMET GFS T2M background error variance:                            1.36
+AGRMET GFS T2M station observation error variance:                   2.38
+AGRMET GFS RH2M background error scale length (m):              197000.
+AGRMET GFS RH2M background error variance:                          51.3
+AGRMET GFS RH2M station observation error variance:                 66.8
+AGRMET GFS SPD10M background error scale length (m):             86000.
+AGRMET GFS SPD10M background error variance:                         0.57
+AGRMET GFS SPD10M station observation error variance:                2.48
+
+AGRMET forcing map projection:             latlon
+AGRMET forcing domain lower left lat:       -89.9531250
+AGRMET forcing domain lower left lon:      -179.9296875
+AGRMET forcing domain upper right lat:       89.9531250
+AGRMET forcing domain upper right lon:      179.9296875
+AGRMET forcing domain resolution (dx):        0.1406250
+AGRMET forcing domain resolution (dy):        0.0937500
+
+AGRMET use IMERG data:                      1
+AGRMET IMERG temperature threshold:        278
+AGRMET IMERG data directory:               ./input/IMERG/Early_V07B
+AGRMET IMERG product:                      3B-HHR-E        # Early Run
+AGRMET IMERG version:                      V07B # Jun 2024
+AGRMET IMERG Probability Liquid Precip Threshold: 100
+
+AGRMET output OBA data: 0
+AGRMET skip backQC: 0
+AGRMET skip superstatQC: 0
+
+AGRMET 3hr maximum precip ceiling: 200.0
+
+AGRMET mask file:                ./input/legacy/all_16/point_switches
+AGRMET terrain file:              ./input/legacy/pst_16/terrain</pre>
 </div>
 </div>
 </div>
@@ -14698,14 +15587,14 @@ SCAN metadata file:       ./input/FORCING/SCAN/msu_scan.mdata</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_forcings_nldas2">9.10.4. NLDAS2</h4>
+<h4 id="sssec_forcings_nldas2">9.10.4. NLDAS2 (grib)</h4>
 <div class="paragraph">
-<p><code>NLDAS2 forcing directory:</code> specifies the location of the NLDAS2
-forcing files.</p>
+<p><code>NLDAS2 forcing directory:</code> specifies the location of the NLDAS-2
+GRIB-1 forcing files.</p>
 </div>
 <div class="paragraph">
-<p><code>NLDAS2 data center source:</code> specifies the center that produced
-the NLDAS2 files. (This is specified to distinguish the filenames.)
+<p><code>NLDAS2 data center source:</code> specifies the center that produced the
+NLDAS-2 GRIB-1 files.  (This is specified to distinguish the filenames.)
 Acceptable values are:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -14733,7 +15622,7 @@ Acceptable values are:</p>
 <div class="paragraph">
 <p><code>NLDAS2 use model level data:</code> specifies whether or not to
 read in the model level data (instead of 2/10m fields) from the
-NLDAS2 forcing dataset (will open up and read &#8220;B&#8221; files).
+NLDAS-2 forcing dataset (will open up and read &#8220;B&#8221; files).
 This data is at the height of the NARR lowest model level.</p>
 </div>
 <div class="paragraph">
@@ -14767,7 +15656,7 @@ Acceptable values are:</p>
 <div class="paragraph">
 <p><code>NLDAS2 use model based swdown:</code> specifies whether or not to
 read in the un-bias corrected model downward shortwave radiation
-data (in leiu of the bias corrected data) from the NLDAS2 forcing
+data (in leiu of the bias corrected data) from the NLDAS-2 forcing
 dataset (will open up and read &#8220;B&#8221; files).  The data source is
 the NARR shortwave.
 Acceptable values are:</p>
@@ -14797,7 +15686,7 @@ Acceptable values are:</p>
 <div class="paragraph">
 <p><code>NLDAS2 use model based precip:</code> specifies whether or not
 to read in the model based precipitation data (instead of the
-observation based precipitation) from the NLDAS2 forcing
+observation based precipitation) from the NLDAS-2 forcing
 dataset (will open up and read &#8220;B&#8221; files).  The data source
 is the NARR precipitation.
 Acceptable values are:</p>
@@ -14825,10 +15714,9 @@ Acceptable values are:</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><code>NLDAS2 use model based pressure:</code> specifies whether or
-not to read in the model base pressure data (instead of the
-observation based pressure) from the NLDAS2 forcing dataset
-(will open up and read &#8220;B&#8221; files).  The data source is
+<p><code>NLDAS2 use model based pressure:</code> specifies whether or not
+to read in the model base pressure data from the NLDAS-2 forcing
+dataset (will open up and read &#8220;B&#8221; files).  The data source is
 the pressure at the NARR lowest model level.
 Acceptable values are:</p>
 </div>
@@ -14867,7 +15755,174 @@ NLDAS2 use model based pressure:        0</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_forcings_COAMPS">9.10.5. COAMPS</h4>
+<h4 id="sssec_forcings_nldas20">9.10.5. NLDAS-2.0 (netcdf)</h4>
+<div class="paragraph">
+<p><code>NLDAS-2.0 FORA forcing directory:</code> specifies the location of the
+NLDAS-2.0 v020 &#8220;FORA&#8221; netCDF-4 forcing files.</p>
+</div>
+<div class="paragraph">
+<p><code>NLDAS-2.0 FORB forcing directory:</code> specifies the location of the
+NLDAS-2.0 v020 &#8220;FORB&#8221; netCDF-4 forcing files.  This config entry
+is not required unless one of the following FORB data use flags is
+set to &#8220;1&#8221;.</p>
+</div>
+<div class="paragraph">
+<p><code>NLDAS-2.0 use FORB model level data:</code> specifies whether or not to
+read in and use the model level data (instead of 2/10-m fields) from
+the NLDAS-2 &#8220;FORB&#8221; forcing dataset.  This data is at the height
+of the NARR lowest model level.  The fields that are used are air
+temperature, air humidity, winds, height of the lowest model level,
+and the aerodynamic conductance.  This config entry is not required,
+and the default will be to not use this FORB data.  However, if the
+FORB model level data is chosen, you must specify the directory of
+the FORB data using the &#8220;NLDAS-2.0 FORB forcing directory:&#8221; config.</p>
+</div>
+<div class="paragraph">
+<p>Note that this will read in &#8220;Height of Atmospheric Forcing&#8221;
+and &#8220;Surface Exchange Coefficient for Heat&#8221; (aka, aerodynamic
+conductance).  You must make sure that &#8220;Forc_Hgt:&#8221; and &#8220;Ch:&#8221;
+(respectively) are included in your forcing variables list file.</p>
+</div>
+<div class="paragraph">
+<p>Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">do not use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>NLDAS-2.0 use FORB model-based SWdown:</code> specifies whether or not
+to read in and use the un-bias-corrected model downward shortwave
+radiation data (in leiu of the bias-corrected data) from the NLDAS-2
+&#8220;FORB&#8221; forcing dataset.  The data source is the NARR shortwave.
+This config entry is not required, and the default will be to not
+use this FORB data.  However, if the FORB model-based SWdown is
+chosen, you must specify the directory of the FORB data using the
+&#8220;NLDAS-2.0 FORB forcing directory:&#8221; config.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">do not use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>NLDAS-2.0 use FORB model-based precip:</code> specifies whether or not
+to read in and use the model-based precipitation data (instead of
+the observation-based precipitation) from the NLDAS-2 &#8220;FORB&#8221;
+forcing dataset.  The data source is the NARR precipitation.
+This config entry is not required, and the default will be to not
+use this FORB data.  However, if the FORB model-based precip is
+chosen, you must specify the directory of the FORB data using the
+&#8220;NLDAS-2.0 FORB forcing directory:&#8221; config.
+Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">do not use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>NLDAS-2.0 use FORB model-based pressure:</code> specifies whether or
+not to read in and use the pressure data from the NLDAS-2 &#8220;FORB&#8221;
+forcing dataset.  This data is at the height of the NARR lowest
+model level.  This config entry is not required, and the default
+will be to not use this FORB data.  However, if the FORB model-based
+pressure is chosen, you must specify the directory of the FORB data
+using the &#8220;NLDAS-2.0 FORB forcing directory:&#8221; config.
+Acceptable values are:</p>
+</div>
+<div class="paragraph">
+<p>Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">do not use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use</p></td>
+</tr>
+</tbody>
+</table>
+<div class="literalblock">
+<div class="title">Example <em>lis.config</em> entry</div>
+<div class="content">
+<pre>NLDAS-2.0 FORA forcing directory:               ./input/NLDAS2/FORA
+NLDAS-2.0 FORB forcing directory:               ./input/NLDAS2/FORB
+NLDAS-2.0 use FORB model level data:            0
+NLDAS-2.0 use FORB model-based SWdown:          0
+NLDAS-2.0 use FORB model-based precip:          0
+NLDAS-2.0 use FORB model-based pressure:        0</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sssec_forcings_COAMPS">9.10.6. COAMPS</h4>
 <div class="paragraph">
 <p><code>COAMPS output forcing directory:</code> specifies the location of
 the COAMPS forcing files.</p>
@@ -14909,7 +15964,7 @@ COAMPS nest id: 1</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_3b42rt">9.10.6. TRMM 3B42RT precipitation</h4>
+<h4 id="sssec_supp_3b42rt">9.10.7. TRMM 3B42RT precipitation</h4>
 <div class="paragraph">
 <p><code>TRMM 3B42RT forcing directory:</code> specifies the location of the
 TRMM 3B42RT forcing files.</p>
@@ -14932,7 +15987,7 @@ TRMM 3B42RT Version 7 forcing files.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_3b42v6">9.10.7. TRMM 3B42V6 precipitation</h4>
+<h4 id="sssec_supp_3b42v6">9.10.8. TRMM 3B42V6 precipitation</h4>
 <div class="paragraph">
 <p><code>TRMM 3B42V6 forcing directory:</code> specifies the location of the
 TRMM 3B42V6 forcing files.</p>
@@ -14945,7 +16000,7 @@ TRMM 3B42V6 forcing files.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_3b42v7">9.10.8. TRMM 3B42V7 precipitation</h4>
+<h4 id="sssec_supp_3b42v7">9.10.9. TRMM 3B42V7 precipitation</h4>
 <div class="paragraph">
 <p><code>TRMM 3B42V7 forcing directory:</code> specifies the location of the
 TRMM 3B42V7 forcing files.</p>
@@ -14958,7 +16013,7 @@ TRMM 3B42V7 forcing files.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_cmorph">9.10.9. CMORPH precipitation</h4>
+<h4 id="sssec_supp_cmorph">9.10.10. CMORPH precipitation</h4>
 <div class="paragraph">
 <p><code>CMORPH forcing directory:</code> specifies the location of the
 CMORPH precipitation forcing files.</p>
@@ -14971,7 +16026,7 @@ CMORPH precipitation forcing files.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_imerg">9.10.10. IMERG precipitation</h4>
+<h4 id="sssec_supp_imerg">9.10.11. IMERG precipitation</h4>
 <div class="paragraph">
 <p><code>IMERG forcing directory:</code> specifies the location of the
 GPM IMERG precipitation forcing files.</p>
@@ -15030,7 +16085,7 @@ IMERG version: 'V06B'</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_stageii">9.10.11. Stage II precipitation</h4>
+<h4 id="sssec_supp_stageii">9.10.12. Stage II precipitation</h4>
 <div class="paragraph">
 <p><code>STAGE2 forcing directory:</code> specifies the location of the
 STAGE2 forcing files.</p>
@@ -15043,7 +16098,7 @@ STAGE2 forcing files.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_stageiv">9.10.12. Stage IV precipitation</h4>
+<h4 id="sssec_supp_stageiv">9.10.13. Stage IV precipitation</h4>
 <div class="paragraph">
 <p><code>STAGE4 forcing directory:</code> specifies the location of the
 STAGE4 forcing files.</p>
@@ -15056,7 +16111,7 @@ STAGE4 forcing files.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_narr">9.10.13. NARR</h4>
+<h4 id="sssec_supp_narr">9.10.14. NARR</h4>
 <div class="paragraph">
 <p><code>NARR forcing directory:</code> specifies the location of the
 NARR forcing files.</p>
@@ -15088,7 +16143,7 @@ NARR domain z-dimension size:      30</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_rfe2daily">9.10.14. RFE2Daily</h4>
+<h4 id="sssec_supp_rfe2daily">9.10.15. RFE2Daily</h4>
 <div class="paragraph">
 <p><code>RFE2Daily forcing directory:</code> specifies the location of the
 RFE2Daily forcing files.</p>
@@ -15109,7 +16164,7 @@ RFE2Daily time offset:          0 # for use by GeoWRSI</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_chirps2">9.10.15. CHIRPS2</h4>
+<h4 id="sssec_chirps2">9.10.16. CHIRPS2</h4>
 <div class="paragraph">
 <p><code>CHIRPS2.0 forcing directory:</code> specifies the location of the
 UCSB CHIRPS v2.0 precipitation forcing file directory. User
@@ -15130,7 +16185,7 @@ CHIRPS2.0 forcing resolution:     0.05</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_petusgs">9.10.16. PET_USGS</h4>
+<h4 id="sssec_supp_petusgs">9.10.17. PET_USGS</h4>
 <div class="paragraph">
 <p><code>USGS PET forcing directory:</code> specifies the location of the
 PET USGS forcing files.</p>
@@ -15170,7 +16225,7 @@ Acceptable values are:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_rfe2gdas">9.10.17. RFE2 data bias corrected to GDAS</h4>
+<h4 id="sssec_rfe2gdas">9.10.18. RFE2 data bias corrected to GDAS</h4>
 <div class="paragraph">
 <p><code>RFE2gdas forcing directory:</code> specifies the location of the
 RFE2gdas forcing files.</p>
@@ -15183,7 +16238,7 @@ RFE2gdas forcing files.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_nam242">9.10.18. NAM242</h4>
+<h4 id="sssec_supp_nam242">9.10.19. NAM242</h4>
 <div class="paragraph">
 <p><code>NAM242 forcing directory:</code> specifies the location of the
 &#8220;NAM 242 AWIPS Grid -- Over Alaska&#8221; forcing files</p>
@@ -15196,7 +16251,7 @@ RFE2gdas forcing files.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_wrfout">9.10.19. WRFout</h4>
+<h4 id="sssec_supp_wrfout">9.10.20. WRFout</h4>
 <div class="paragraph">
 <p><code>WRF output forcing directory:</code> specifies the location of the
 WRF output data files.</p>
@@ -15213,7 +16268,7 @@ WRF nest id:                          1</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_wrfoutv2">9.10.20. WRFoutv2</h4>
+<h4 id="sssec_supp_wrfoutv2">9.10.21. WRFoutv2</h4>
 <div class="paragraph">
 <p><code>WRF output v2 forcing directory:</code> specifies the location of the
 &#8220;NCAR-WRF 4km metforcing output&#8221; forcing files</p>
@@ -15226,7 +16281,7 @@ WRF nest id:                          1</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_wrfakdom">9.10.21. WRF AK domain</h4>
+<h4 id="sssec_supp_wrfakdom">9.10.22. WRF AK domain</h4>
 <div class="paragraph">
 <p><code>WRF AK forcing directory:</code> specifies the location of the
 &#8220;NCAR-WRF Alaska domain 4km metforcing output&#8221; files</p>
@@ -15239,7 +16294,7 @@ WRF nest id:                          1</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_geos5forecast">9.10.22. GEOS5 Forecast</h4>
+<h4 id="sssec_geos5forecast">9.10.23. GEOS5 Forecast</h4>
 <div class="paragraph">
 <p><code>GEOS5 forecast forcing directory:</code> specifies the location
 of the GEOS5 forecast forcing files.</p>
@@ -15257,7 +16312,7 @@ GEOS5 forecast forcing number of ensemble members:   11</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_gefsforecast">9.10.23. GEFS Forecast</h4>
+<h4 id="sssec_gefsforecast">9.10.24. GEFS Forecast</h4>
 <div class="paragraph">
 <p><code>GEFS forecast directory:</code> specifies the location
 of the GEFS forecast forcing files.</p>
@@ -15326,7 +16381,7 @@ GEFS forecast grid resolution:   0.25</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_genensfcst">9.10.24. Generic Ensemble Forecast Reader</h4>
+<h4 id="sssec_genensfcst">9.10.25. Generic Ensemble Forecast Reader</h4>
 <div class="paragraph">
 <p><code>Generic ensemble forecast directory:</code> specifies the location
 of the user-generated ensemble forecast forcing files.</p>
@@ -15357,7 +16412,7 @@ Generic ensemble forecast initial date:    20200501</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_pptensfcst">9.10.25. Precipitation-only Ensemble Forecast Reader</h4>
+<h4 id="sssec_pptensfcst">9.10.26. Precipitation-only Ensemble Forecast Reader</h4>
 <div class="paragraph">
 <p><code>Precipitation ensemble forecast directory:</code> specifies the location
 of the user-generated ensemble precipitation forecast forcing files.</p>
@@ -15388,7 +16443,7 @@ Precipitation ensemble forecast initial date:  20200501</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_bondville">9.10.26. Bondville</h4>
+<h4 id="sssec_bondville">9.10.27. Bondville</h4>
 <div class="paragraph">
 <p><code>Bondville forcing file:</code> specifies the location of the
 Bondville forcing file.</p>
@@ -15430,7 +16485,7 @@ Bondville Noah-MP-4.0.1 forcing:     1</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_snotel">9.10.27. SNOTEL</h4>
+<h4 id="sssec_snotel">9.10.28. SNOTEL</h4>
 <div class="paragraph">
 <p><code>SNOTEL forcing directory:</code> specifies the location of the
 SNOTEL forcing files.</p>
@@ -15453,7 +16508,7 @@ SNOTEL coord file:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_vicforcing">9.10.28. VIC processed forcing</h4>
+<h4 id="sssec_vicforcing">9.10.29. VIC processed forcing</h4>
 <div class="paragraph">
 <p>This is used by the LIS development team to support debugging VIC
 within LIS.  One must first run stand-alone VIC, configured to
@@ -15522,7 +16577,7 @@ VIC NR:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_pals">9.10.29. PALS station</h4>
+<h4 id="sssec_pals">9.10.30. PALS station</h4>
 <div class="paragraph">
 <p><code>PALS met forcing directory:</code> specifies the location of the
 PALS station forcing files.</p>
@@ -15570,7 +16625,7 @@ PALS met forcing data start second:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_ldtgen">9.10.30. LDT-generated</h4>
+<h4 id="sssec_ldtgen">9.10.31. LDT-generated</h4>
 <div class="paragraph">
 <p><code>Generated metforcing directory:</code> specifies the location of the
 LDT generated meteorological forcing files.  Files generated in LDT
@@ -15585,7 +16640,7 @@ by the LIS reader.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_climstand">9.10.31. CLIM-Standard</h4>
+<h4 id="sssec_climstand">9.10.32. CLIM-Standard</h4>
 <div class="paragraph">
 <p><code>Metforcing climatology directory:</code> specifies the location of the
 LDT generated forcing climatologies files.  Files generated in LDT
@@ -15600,7 +16655,7 @@ by this selected reader in LIS.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_genensfcstforcing">9.10.32. Generic ensemble forecast</h4>
+<h4 id="sssec_genensfcstforcing">9.10.33. Generic ensemble forecast</h4>
 <div class="paragraph">
 <p><code>Generic ensemble forecast directory:</code> specifies the location of the
 generic ensemble forecast data.</p>
@@ -15618,7 +16673,7 @@ Generic ensemble forecast number of ensemble members:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_supp_awap">9.10.33. AWAP</h4>
+<h4 id="sssec_supp_awap">9.10.34. AWAP</h4>
 <div class="paragraph">
 <p><code>AWAP forcing directory:</code> specifies the location of the AWAP precipitation
 forcing data.</p>
@@ -15631,7 +16686,7 @@ forcing data.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_gdast1534forcing">9.10.34. GDAS T1534</h4>
+<h4 id="sssec_gdast1534forcing">9.10.35. GDAS T1534</h4>
 <div class="paragraph">
 <p><code>GDAS T1534 forcing directory:</code> specifies the location of the GDAS T1534 metforcing data.</p>
 </div>
@@ -15643,7 +16698,7 @@ forcing data.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_mrmsforcing">9.10.35. MRMS</h4>
+<h4 id="sssec_mrmsforcing">9.10.36. MRMS</h4>
 <div class="paragraph">
 <p><code>MRMS forcing directory:</code> specifies the location of the MRMS metforcing data.</p>
 </div>
@@ -15669,7 +16724,7 @@ MRMS mask directory: ./input/MASKS/</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_awral600forcing">9.10.36. AWRA-L 6.0.0</h4>
+<h4 id="sssec_awral600forcing">9.10.37. AWRA-L 6.0.0</h4>
 <div class="paragraph">
 <p><code>AWRAL forcing directory:</code> specifies the location of the AWRA-L metforcing data.</p>
 </div>
@@ -15689,7 +16744,7 @@ AWRAL domain y-dimension size:         681</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_plumber2forcing">9.10.37. PLUMBER2</h4>
+<h4 id="sssec_plumber2forcing">9.10.38. PLUMBER2</h4>
 <div class="paragraph">
 <p><code>PLUMBER2 forcing file:</code> specifies the location of the PLUMBER2 forcing file.</p>
 </div>
@@ -15709,7 +16764,7 @@ PLUMBER2 Time Delta: 1800</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_gddpforcing">9.10.38. GDDP</h4>
+<h4 id="sssec_gddpforcing">9.10.39. GDDP</h4>
 <div class="paragraph">
 <p><code>GDDP forcing file:</code> specifies the location of the GDDP metforcing data.</p>
 </div>
@@ -15733,7 +16788,7 @@ GDDP reference hourly climatology directory: ./input/MET_FORCING/M2CLIMO/HOURLY/
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_galwemforecast">9.10.39. GALWEM Forecast</h4>
+<h4 id="sssec_galwemforecast">9.10.40. GALWEM Forecast</h4>
 <div class="paragraph">
 <p><code>GALWEM forecast forcing directory:</code> specifies the location
 of the GALWEM forecast forcing files.</p>
@@ -15758,7 +16813,7 @@ GALWEM forecast run mode:          forecast    # forecast | analysis</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_galwemgeforecast">9.10.40. GALWEM-GE Forecast</h4>
+<h4 id="sssec_galwemgeforecast">9.10.41. GALWEM-GE Forecast</h4>
 <div class="paragraph">
 <p><code>GALWEM-GE forecast forcing directory:</code> specifies the location
 of the GALWEM-GE forecast forcing files.</p>
@@ -15772,17 +16827,48 @@ run mode. Currently, only the forecast mode is supported.</p>
 <p><code>GALWEM-GE forecast number of ensemble members:</code> specifies the number of ensembles
 of the GALWEM-GE forecast forcing data.</p>
 </div>
+<div class="paragraph">
+<p><code>Apply GALWEM-GE precipitation bias correction:</code> specifies whether to enable the precipitation
+bias correction. Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not enable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>GALWEM-GE model CDF directory:</code> specifies the location of the GALWEM-GE model CDF files.</p>
+</div>
 <div class="literalblock">
 <div class="title">Example <em>lis.config</em> entry</div>
 <div class="content">
-<pre>GALWEM-GE forecast forcing directory:          ./GALWEM_GE
-GALWEM-GE forecast run mode:                   forecast    # forecast | analysis
-GALWEM-GE forecast number of ensemble members: 21</pre>
+<pre>GALWEM-GE forecast forcing directory:          ./input/GALWEM_GE
+GALWEM-GE forecast run mode:                   forecast
+GALWEM-GE forecast number of ensemble members: 10
+Apply GALWEM-GE precipitation bias correction: 1 #enter 1 - use; or 0
+GALWEM-GE model CDF directory:                 ./input/cdf/</pre>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_mogrepsgforecast">9.10.41. MOGREPS-G Forecast</h4>
+<h4 id="sssec_mogrepsgforecast">9.10.42. MOGREPS-G Forecast</h4>
 <div class="paragraph">
 <p><code>MOGREPS-G forecast forcing directory:</code> specifies the location
 of the MOGREPS-G forecast forcing files.</p>
@@ -20367,6 +21453,81 @@ AWRAL600 initial sd: 0.5 0.5
 AWRAL600 initial mleaf: 0.67 0.2</pre>
 </div>
 </div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 soil parameter table:</code> specifies the soil AquaCrop.7.2 soil parameter file.</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 model timestep:</code> specifies the model timestep for AquaCrop.7.2. This option should be set to <code>"1da"</code> because of the fixed daily model timestep of AquaCrop.</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 restart output interval:</code> specifies the restart writing interval for AquaCrop.7.2 The typical value is 1 month (1mo).</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 restart file:</code> specifies the AquaCrop.7.2 restart file.</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 restart file format:</code> specifies the restart file format for AquaCrop.7.2.</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 reference height for forcing T and q:</code> specifies the height in meters of air temperature and specific humidity forcings.</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 reference height for forcing u and v:</code> specifies the height in meters of u and v wind forcings.</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 initial liquid soil moistures:</code> specifies the initial liquid volumetric soil moistures (for each layer defined in LDT, from top to bottom) used in the cold start runs. (units \(\frac{m^3}{m^3}\))</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 input path:</code> specifies the directory containing the native AquaCrop files.</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 CO2_Filename:</code> specifies the file name of the CO2 file (.CO2) used by AquaCrop.7.2 stored in the "input path" directory.</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 crop library directory:</code> specifies the location of the crop library directory containing the AC_Crop.Inventory file and the AC_Crop.List directory containing the crop files.</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 Management_Filename:</code> specifies the management file (.MAN) used by AquaCrop.7.2 stored in the "input path" directory. If not specified, AquaCrop.7.2 will run without management file (set to "(None)").</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 Irrigation_Filename:</code> specifies the management file (.IRR) used by AquaCrop.7.2 stored in the "input path" directory. If not specified, AquaCrop.7.2 will run without irrigation file (set to "(None)").</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 starting day of sim period:</code> specifies the starting day of the AquaCrop simulation period (same for each year given that the length of the AquaCrop simulation period is hardcoded to 1 calendar year).</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 starting month of sim period:</code> specifies the starting month of the AquaCrop simulation period (same for each year given that the length of the AquaCrop simulation period is hardcoded to 1 calendar year).</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 starting day of crop period:</code> specifies the starting day of the AquaCrop cropping period (planting/sowing). Currently, only one cropping period is possible within an AquaCrop simulation period (= 1 calendar year).</p>
+</div>
+<div class="paragraph">
+<p><code>AquaCrop.7.2 starting month of crop period:</code> specifies the starting month of the AquaCrop cropping period (planting/sowing). Currently, only one cropping period is possible within an AquaCrop simulation period (= 1 calendar year).</p>
+</div>
+<div class="literalblock">
+<div class="title">Example <em>lis.config</em> entry:</div>
+<div class="content">
+<pre>AquaCrop.7.2 soil parameter table: ./SOILPARM_AC72.TBL
+AquaCrop.7.2 model timestep: "1da"
+AquaCrop.7.2 restart output interval: "1mo"
+AquaCrop.7.2 restart file: none
+AquaCrop.7.2 restart file format: netcdf
+AquaCrop.7.2 reference height of T and q: 2.0
+AquaCrop.7.2 reference height of u and v: 10.0
+AquaCrop.7.2 initial liquid soil moistures: 0.33 0.33
+AquaCrop.7.2 input path: "./AC_INPUT_dir/"
+AquaCrop.7.2 CO2_Filename: "file.CO2"
+AquaCrop.7.2 crop library directory: "./crop_params_dir/"
+AquaCrop.7.2 Management_Filename: "file.MAN"
+AquaCrop.7.2 Irrigation_Filename: "file.IRR"
+
+##Simulation and crop period
+AquaCrop.7.2 starting day of sim period: 1
+AquaCrop.7.2 starting month of sim period: 1
+AquaCrop.7.2 starting day of crop period: 22
+AquaCrop.7.2 starting month of crop period: 3</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -21469,6 +22630,39 @@ active restart file.</p>
 <p><code>HYMAP2 2-way coupling flooded fraction threshold:</code> specifies the flooded fraction
 threshold used in the 2-way coupling mode.</p>
 </div>
+<div class="paragraph">
+<p><code>HYMAP2 use localization update in DA:</code> specifies whether to enable the localization
+scheme for DA.</p>
+</div>
+<div class="paragraph">
+<p>Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not use localization</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use localization for DA</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>HYMAP2 localization update window size:</code> specifies localization update window size.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP2 localization weight map:</code> specifies the file location of the localization weight map.</p>
+</div>
 <div class="literalblock">
 <div class="title">Example <em>lis.config</em> entry</div>
 <div class="content">
@@ -21491,13 +22685,418 @@ HYMAP2 routing model dwi flag: 0
 HYMAP2 routing model start mode: "coldstart"
 HYMAP2 routing model restart interval: "1mo"
 HYMAP2 routing model restart file: "./OL/ROUTING/197901/LIS_RST_HYMAP2_router_197901030000.d01.nc
+
 HYMAP2 enable 2-way coupling: 0
-HYMAP2 2-way coupling flooded fraction threshold: 2.0</pre>
+HYMAP2 2-way coupling flooded fraction threshold: 0.1
+
+HYMAP2 use localization update in DA: 0
+HYMAP2 localization update window size: 10
+HYMAP2 localization weight map: ./input/localization_map/distance_map_full_ohio_010.nc</pre>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_nldasrouting">9.17.3. NLDAS routing</h4>
+<h4 id="sssec_hymap3routing">9.17.3. HYMAP3 routing</h4>
+<div class="paragraph">
+<p><code>HYMAP3 routing model time step:</code> specifies the timestep for
+the HyMAP3 router.</p>
+</div>
+<div class="paragraph">
+<p>See Section <a href="#ssec_timeinterval">Defining a time interval</a> for a description
+of how to specify a time interval.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 routing model output interval:</code> defines the output
+writing interval for the HyMAP3 router.</p>
+</div>
+<div class="paragraph">
+<p>See Section <a href="#ssec_timeinterval">Defining a time interval</a> for a description
+of how to specify a time interval.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 run in ensemble mode:</code> specifies whether to run the HyMAP3 router in ensemble mode.</p>
+</div>
+<div class="paragraph">
+<p>Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not run in ensemble mode</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Run in ensemble mode</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>HYMAP3 routing method:</code> specifies the HyMAP3 routing method to use.</p>
+</div>
+<div class="paragraph">
+<p>Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kinematic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use kinematic method</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">diffusive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use diffusive method</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8220;local inertia&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use local inertia method</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hybrid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use hybrid method (requires a river flow map from LDT)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">urban</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use urban hydrology method (requires river flow and urban drainage outlet maps from LDT, and an additional lis.config_ entry)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>HYMAP3 urban drainage parameter file:</code> specifies the text file name containing gutter and drainage network parameters. This config entry is only used when ` HYMAP3 routing method:` is set to <code>urban</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 routing model time step method:</code> specifies the HyMAP3
+routing model time step method to use. This option is elective. If not defined,  HYMAP3 adopts <code>adaptive</code> by default.</p>
+</div>
+<div class="paragraph">
+<p>Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">constant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use constant timestep</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">adaptive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use adaptive (time-varying) timesteps (must provide an alfa coefficient value)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>HYMAP3 routing model adaptive time step alfa coefficient:</code>
+specifies the adaptive time step alfa coefficient (a real number)
+for the HyMAP3 router.  This option is elective. If not defined,  HYMAP3 adopts 0.5 by default. This coefficient is not needed if using the <code>constant</code> time step method.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 floodplain dynamics:</code> specifies whether simulate
+floodplain dynamics in the HyMAP3 router.</p>
+</div>
+<div class="paragraph">
+<p>Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>HYMAP3 reservoir operation option:</code> specifies whether to use reservoir operations in the HyMAP3 router.  This option is elective. If not defined,  HYMAP3 does not use reservoir operation.</p>
+</div>
+<div class="paragraph">
+<p>Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use data-driven model (additional <em>lis.config</em> entries required)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use parameter-based model (additional <em>lis.config</em> entries required)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use beaver dam module (additional <em>lis.config</em> entries required)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>additional <em>lis.config</em> entries for  data-driven model</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 reservoir operation input directory:</code> specifies the input
+directory for the reservoir operation files to be used when using
+reservoir operations with the HyMAP3 router.  This config entry is
+only used when <code>HYMAP3 reservoir operation option:</code> is set to 1.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 reservoir operation header filename:</code> specifies the filename
+header for the reservoir operation files to be used when using
+reservoir operations with the HyMAP3 router.  This config entry is
+only used when <code>HYMAP3 reservoir operation option:</code> is set to 1.</p>
+</div>
+<div class="paragraph">
+<p>additional <em>lis.config</em> entries for parameter-based model
+<code>HYMAP3 reservoir operation input file:</code> specifies NetCDF file containing reservoir parameters. This config entry is only used when <code>HYMAP3 reservoir operation option:</code> is set to 2.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 reservoir list:</code> specifies text file containing the list of reservoirs. This config entry is only used when <code>HYMAP3 reservoir operation option:</code> is set to 2.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 levee:</code> specifies whether to account for levees. This option is elective. If not defined,  HYMAP3 does not account for levees.</p>
+</div>
+<div class="paragraph">
+<p>Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use (requires a levee map from LDT)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>HYMAP3 sea level:</code> specifies whether to account for sea levels as downstream boundary condition. This option is elective. If not defined,  HYMAP3 does not account for sea levels.</p>
+</div>
+<div class="paragraph">
+<p>Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use (requires additional lis.config_ entries)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>HYMAP3 sea level input directory:</code> specifies the directory where data is found when using sea levels as downstream boundary condition with the HyMAP3 router.  This config entry is only used when <code>HYMAP3 sea level:</code> is set to 1.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 sea level header filename:</code> specifies the filename header for the sea level files to be used when using sea levels as downstream boundary condition with the HyMAP3 router. This config entry is only used when <code>HYMAP3 sea level:</code> is set to 1.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 sea level outlet list:</code> specifies the text filename listing the outlet grid cells using sea level data as downstream boundary conditions with the HyMAP3 router. This config entry is only used when <code>HYMAP3 sea level:</code> is set to 1.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 routing model start mode:</code> specifies the restart mode
+to be used for the HyMAP3 router.</p>
+</div>
+<div class="paragraph">
+<p>Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">restart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A restart mode is being used; read a HyMAP3 restart file</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">coldstart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A cold start mode is being used; no restart file read</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>HYMAP3 routing model restart interval:</code> defines the restart writing
+interval for the HyMAP3 router.</p>
+</div>
+<div class="paragraph">
+<p>See Section <a href="#ssec_timeinterval">Defining a time interval</a> for a description
+of how to specify a time interval.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 routing model restart file:</code> specifies the HyMAP3 router
+active restart file.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 enable 2-way coupling:</code> specifies whether to enable 2-way coupling.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>HYMAP3 2-way coupling flooded fraction threshold:</code> specifies the flooded fraction
+threshold used in the 2-way coupling mode.</p>
+</div>
+<div class="paragraph">
+<p><code>HYMAP3 runoff bias correction:</code> specifies whether to account for a runoff bias correction. This option is elective and, if not defined, HYMAP3 does not account for runoff bias correction. This option requires a runoff bias correction field provided in the LIS domain and parameter data file (HYMAP_runoff_bias_correction).</p>
+</div>
+<div class="paragraph">
+<p>Acceptable values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use</p></td>
+</tr>
+</tbody>
+</table>
+<div class="literalblock">
+<div class="title">Example <em>lis.config</em> entry</div>
+<div class="content">
+<pre>HYMAP3 routing model time step: "30mn"
+HYMAP3 routing model output interval: "1da"
+HYMAP3 run in ensemble mode: 0
+HYMAP3 routing method: "kinematic"
+HYMAP3 routing model time step method: "constant"
+HYMAP3 routing model adaptive time step alfa coefficient: 0.7
+HYMAP3 floodplain dynamics: 1
+HYMAP3 reservoir operation option: 1
+HYMAP3 reservoir operation input directory: "./reservoir_data"
+HYMAP3 reservoir operation header filename: "RESDATA"
+HYMAP3 levees: 1
+HYMAP3 sea level: 1
+HYMAP3 sea level input directory: “./sea_level_data”
+HYMAP3 sea level header filename: “SEALEVDATA”_
+HYMAP3 sea level outlet list: “OUTLETLIST”
+HYMAP3 routing model start mode: "coldstart"
+HYMAP3 routing model restart interval: "1mo"
+HYMAP3 routing model restart file: "./OL/ROUTING/197901/LIS_RST_HYMAP3_router_197901030000.d01.nc
+HYMAP3 enable 2-way coupling: 0
+HYMAP3 2-way coupling flooded fraction threshold: 0.1
+HYMAP3 runoff bias correction: 1</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sssec_nldasrouting">9.17.4. NLDAS routing</h4>
 <div class="paragraph">
 <p><code>NLDAS routing model output interval:</code> defines the output
 writing interval for the NLDAS router.</p>
@@ -21581,7 +23180,7 @@ NLDAS routing model restart file:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_rapidrouting">9.17.4. RAPID routing</h4>
+<h4 id="sssec_rapidrouting">9.17.5. RAPID routing</h4>
 <div class="paragraph">
 <p><code>RAPID routing model time step:</code> specifies the timestep for
 the RAPID router.</p>
@@ -21664,7 +23263,7 @@ Acceptable values are:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Run in ensemble mode (not support)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Run in ensemble mode</p></td>
 </tr>
 </tbody>
 </table>
@@ -21766,7 +23365,7 @@ RAPID namelist file: ./rapid_params/rapid_namelist</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sssec_lsm_Crocus8.1">9.17.5. Crocus8.1</h4>
+<h4 id="sssec_lsm_Crocus8.1">9.17.6. Crocus8.1</h4>
 <div class="paragraph">
 <p><code>CROCUS81 model timestep:</code> specifies the timestep for the run.</p>
 </div>
@@ -23411,7 +25010,26 @@ SM_TotalPrecip:  1  m       DN   3 0 0 1  61 10000   # Total precipitation rate 
 SM_SWdown:    1  W/m2    DN   1 0 0 1 204 10         # SnowModel-modified SWdown
 SM_LWdown:    1  W/m2    DN   1 0 0 1 205 10         # SnowModel-modified LWdown
 SM_NWind:     1  m/s     N    1 0 0 1  34 10         # SnowModel-modified NWind
-SM_EWind:     1  m/s     E    1 0 0 1  33 10         # SnowModel-modified EWind</pre>
+SM_EWind:     1  m/s     E    1 0 0 1  33 10         # SnowModel-modified EWind
+
+#AquaCrop output
+AC_Biomass:            1  t/ha  -  1 0 0 1 223 1000 # cummulative biomass (ton/ha)
+AC_RootZoneWC_Actual:  1  mm    -  1 0 0 1 153 1000 # actual rootzone WC (mm)
+AC_RootZoneWC_WP:      1  mm    -  1 0 0 1 153 1000 # rootzone WC at wilting point (mm)
+AC_RootZoneWC_FC:      1  mm    -  1 0 0 1 153 1000 # rootzone WC at field capacity (mm)
+AC_Tact:               1  mm    -  1 0 0 1 153 1000 # actual plant transpiration (mm)
+AC_Eact:               1  mm    -  1 0 0 1 153 1000 # actual soil evaporation (mm)
+AC_ETo:                1  mm    -  1 0 0 1 153 1000 # reference ET Penman-Monteith (mm)
+AC_Rain:               1  mm    -  1 0 0 1 153 1000 # daily rainfall (mm)
+AC_Irrigation:         1  mm    -  1 0 0 1 153 1000 # irrigation (mm)
+AC_RootingDepth:       1  m     -  1 0 0 1 151 1000 # rooting depth (m)
+AC_CCiActual:          1  -     -  1 0 0 1 151 1000 # canopy Cover (-)
+AC_Tmin:               1  degC  -  1 0 0 1 153 1000 # daily minimum temperature (degC)
+AC_Tmax:               1  degC  -  1 0 0 1 153 1000 # daily maximum temperature (degC)
+AC_Yield:              1  t/ha  -  1 0 0 1 153 1000 # yield (ton/ha)
+AC_StExp:              1  %     -  1 0 0 1 153 1000 # expansion stress (%)
+AC_StSen:              1  %     -  1 0 0 1 153 1000 # senescence stress (%)
+AC_cycle_complete:     1  -     -  1 0 0 1 153 1000 # Flag cycle completed within sim</pre>
 </div>
 </div>
 </div>
@@ -23779,8 +25397,8 @@ Program stopping..</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 3.0<br>
-Last updated 2024-05-09 15:11:23 UTC
+Version 5.0<br>
+Last updated 2026-04-09 13:46:25 UTC
 </div>
 </div>
 <script type="text/x-mathjax-config">
@@ -23806,6 +25424,6 @@ MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
   })
 })
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
